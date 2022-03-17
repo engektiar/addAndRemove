@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add And Remove Element</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>This is add and remove Eliment</h1>
+      <ul id="mylist">
+        <li class="item">Lorem, ipsum dolor.</li>
+        <li class="item">Perspiciatis, explicabo. Incidunt.</li>
+        <li class="item">Aliquid, harum facilis!</li>
+        <li class="item">Quam, ab nam!</li>
+        <li class="item">Animi, soluta ullam?</li>
+      </ul>
+      <button id="addItem">Add new Data</button>
+      <button id="itemremove">Remove this data</button>
+    </div>
+    <script>
+      //add new data start
+      document.getElementById("addItem").addEventListener("click", function (enent) {
+        var itemParent = document.getElementById("mylist");
+        var newItem = document.createElement("li");
+        newItem.innerText = "Add this item";
+        itemParent.appendChild(newItem);
+      });
+      //add new data end
+
+      //Reamove this item start
+
+      document.getElementById("mylist").addEventListener("click", function (event) {
+        // console.log(this, event.target);
+        event.target.parentNode.removeChild(event.target);
+      });
+      //Reamove this item end
+    </script>
+  </body>
+</html>

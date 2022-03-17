@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OnClicck</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>My list</h1>
+      <ul id="mylist">
+        <li id="frist" class="item">Tui mure kcha vai</li>
+        <li class="item">Lorem, ipsum dolor.</li>
+        <li class="item">my dear friem</li>
+        <li class="item">loka bolla mai nake</li>
+        <li class="item">ka bolsa tor biya hoba na</li>
+      </ul>
+      <button id="addItem">Add nem item</button>
+    </div>
+    <script>
+      var items = document.getElementsByClassName("item");
+      for (let i = 0; i < items.length; i++) {
+        var item = items[i];
+        item.addEventListener("click", function (enent) {
+          event.target.parentNode.removeChild(event.target);
+        });
+        console.log(item);
+      }
+      //add item part
+      document.getElementById("addItem").addEventListener("click", function (enent) {
+        var itemParent = document.getElementById("mylist");
+        var newItem = document.createElement("li");
+        newItem.innerText = "Barand new Item";
+        itemParent.appendChild(newItem);
+      });
+      //add item part
+
+      ///part one
+
+      // var items = document.getElementsByClassName("item");
+      // for (let i = 0; i < items.length; i++) {
+      //   var item = items[i];
+      //   item.addEventListener("click", function (enent) {
+      //     console.log(this, event.target.innerText);
+      //   });
+      //   console.log(item);
+      // }
+      //emd
+      //start
+      // document.getElementById("frist").addEventListener("click", function (event) {
+      //   console.log("fast comment clicked");
+      // });
+      //end
+      // document.getElementById("mylist").addEventListener("click", function (event) {
+      //   console.log(" my least");
+      // });
+      //end
+      // document.getElementById("container").addEventListener("click", function () {
+      //   console.log(" this is container");
+      // });
+    </script>
+  </body>
+</html>

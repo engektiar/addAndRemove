@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>event</title>
+  </head>
+  <body>
+    <h1>This is Javascrip Event</h1>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit nostrum vel adipisci modi, unde maxime delectus molestias architecto sit sapiente et soluta alias ea ullam
+      iure, porro quisquam natus rerum quos! Dignissimos temporibus accusantium sunt eius consequuntur magnam tenetur fugit ipsam eos. Id atque quod ut distinctio perspiciatis
+      reprehenderit molestias.
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore aliquam deleniti consequuntur dolor corrupti dignissimos velit odit eveniet officia similique.</p>
+    <button>Button-01</button>
+    <button id="sceound">Button-02</button>
+    <button>Button-03</button>
+    <button>Button-04</button>
+    <button id="lastChild">Button-05</button>
+    <script>
+      document.getElementById("lastChild").addEventListener("click", function () {
+        document.body.style.color = "green";
+      });
+      function hadelcleek() {
+        document.body.style.backgroundColor = "cyan";
+      }
+      const secoundButton = document.getElementById("sceound");
+      secoundButton.onclick = hadelcleek;
+    </script>
+  </body>
+</html>
